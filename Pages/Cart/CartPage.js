@@ -31,8 +31,8 @@ const CartPage = props =>{
                 <List data={CartItems} navigation={props.navigation}/>
             </ScrollView>
             <View style={styles.priceInfoBar}>
-                <Text style={styles.totalPriceText}>${totalAmount.toFixed(2)}</Text>
-                <TouchableNativeFeedback
+                <Text nativeID="total-order" accessibilityLabel="total-order" style={styles.totalPriceText}>${totalAmount.toFixed(2)}</Text>
+                <TouchableNativeFeedback nativeID="place-order" accessibilityLabel="place-order"
                     onPress={()=>props.navigation.navigate({
                         routeName : 'OrderSummary',
                         params:{
