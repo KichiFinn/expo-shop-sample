@@ -30,9 +30,9 @@ export const List = props =>{
                                     <Image style={styles.image} title='product image' source={{uri : item.imageUrl}}/>
                                 </TouchableNativeFeedback>
                                 <View style={styles.quantityBox}>
-                                    <Ionicons name='ios-arrow-dropleft' size={20} onPress={()=>dispatch(decreaseItemQuantity(item.productId))}/>
+                                    <Ionicons name='md-caret-back-circle-sharp' size={20} onPress={()=>dispatch(decreaseItemQuantity(item.productId))}/>
                                     <Text>{quantity}</Text>
-                                    <Ionicons name='ios-arrow-dropright' size={20} onPress={()=>dispatch(increaseItemQuantity(item.productId))}/>
+                                    <Ionicons name='md-caret-forward-circle-sharp' size={20} onPress={()=>dispatch(increaseItemQuantity(item.productId))}/>
                                 </View>
                             </View>
                         </View>
