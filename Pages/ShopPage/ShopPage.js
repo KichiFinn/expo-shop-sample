@@ -32,7 +32,7 @@ ShopPage.navigationOptions = navData =>{
         headerRight : ()=>{
             return (
                 <HeaderButtons HeaderButtonComponent={HeaderButton}>
-                    <View nativeID="cart" accessibilityLabel="cart" style={styles.cartIconContainer}>
+                    <View testID = "cart" key= "cart" nativeID="cart" accessibilityLabel="cart" style={styles.cartIconContainer}>
                         <Item
                             title='Menu' 
                             iconName='md-cart'
@@ -42,7 +42,7 @@ ShopPage.navigationOptions = navData =>{
                         {
                             totalItems!==0?
                             <View style={styles.itemCountContainer}>
-                                <Text nativeID="cart-count" accessibilityLabel="cart-count" style={styles.itemCountText}>{totalItems}</Text>
+                                <Text  testID = "cart-count" key= "cart-count" nativeID="cart-count" accessibilityLabel="cart-count" style={styles.itemCountText}>{totalItems}</Text>
                             </View>
                             :null
                         }

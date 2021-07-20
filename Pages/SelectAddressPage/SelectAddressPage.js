@@ -17,7 +17,7 @@ const SelectAddressPage = props=>{
 
     return(
         <View style={styles.container}>
-            <TouchableNativeFeedback nativeID="add-new-address" accessibilityLabel="add-new-address" onPress={()=>props.navigation.navigate('AddressForm')}>
+            <TouchableNativeFeedback testID="add-new-address" key="add-new-address" nativeID="add-new-address" accessibilityLabel="add-new-address" onPress={()=>props.navigation.navigate('AddressForm')}>
                 <View style={styles.addButton} >
                     <Ionicons name='ios-add' size={40} color={'#A5CAD2'}/>
                     <Text style={styles.addButtonText}>Add new address</Text>

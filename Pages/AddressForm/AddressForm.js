@@ -56,14 +56,14 @@ const AddressForm = props=>{
             
                 <ScrollView>
                     <View style={styles.addressInfo}> 
-                        <TextInput nativeID="name" accessibilityLabel="name" placeholder='Name*' style={styles.textInput} value={userName} onChangeText={text=>setUserName(text)}/> 
-                        <TextInput nativeID="mobile-number" accessibilityLabel="mobile-number" placeholder='Mobile Number*' style={styles.textInput} keyboardType={"number-pad"} value={mobileNumber} onChangeText={text=>setMobileNumber(text)}/>
-                        <TextInput nativeID="pincode" accessibilityLabel="pincode" placeholder='Pincode*' style={styles.textInput} keyboardType={"number-pad"} value={pincode} onChangeText={text=>setPincode(text)}/>
-                        <TextInput nativeID="house-no" accessibilityLabel="house-no" placeholder='House No.,Building Name*' style={styles.textInput} value={houseInfo} onChangeText={text=>setHouseInfo(text)}/>    
-                        <TextInput nativeID="road-name" accessibilityLabel="road-name" placeholder='Road Name, Area, Colony*' style={styles.textInput} value={streetInfo} onChangeText={text=>setStreetInfo(text)}/>    
-                        <TextInput nativeID="city" accessibilityLabel="city" placeholder='City*' style={styles.textInput} value={city} onChangeText={text=>setCity(text)}/>    
+                        <TextInput key="name" testID = "name" nativeID="name" accessibilityLabel="name" placeholder='Name*' style={styles.textInput} value={userName} onChangeText={text=>setUserName(text)}/> 
+                        <TextInput key="mobile-number" testID = "mobile-number" nativeID="mobile-number" accessibilityLabel="mobile-number" placeholder='Mobile Number*' style={styles.textInput} keyboardType={"number-pad"} value={mobileNumber} onChangeText={text=>setMobileNumber(text)}/>
+                        <TextInput key="pincode" testID = "pincode" nativeID="pincode" accessibilityLabel="pincode" placeholder='Pincode*' style={styles.textInput} keyboardType={"number-pad"} value={pincode} onChangeText={text=>setPincode(text)}/>
+                        <TextInput key="house-no" testID = "house-no" nativeID="house-no" accessibilityLabel="house-no" placeholder='House No.,Building Name*' style={styles.textInput} value={houseInfo} onChangeText={text=>setHouseInfo(text)}/>    
+                        <TextInput key="road-name" testID = "road-name" nativeID="road-name" accessibilityLabel="road-name" placeholder='Road Name, Area, Colony*' style={styles.textInput} value={streetInfo} onChangeText={text=>setStreetInfo(text)}/>    
+                        <TextInput key="city" testID = "city" nativeID="city" accessibilityLabel="city" placeholder='City*' style={styles.textInput} value={city} onChangeText={text=>setCity(text)}/>    
                     </View>
-                    <View nativeID="save-update-address" accessibilityLabel="save-update-address" style={styles.saveButtonBox}>
+                    <View key="save-update-address" testID = "save-update-address" nativeID="save-update-address" accessibilityLabel="save-update-address" style={styles.saveButtonBox}>
                         <TouchableNativeFeedback
                                 onPress={selectedAddress? updateAddressHandler:saveAddressHandler}
                         >

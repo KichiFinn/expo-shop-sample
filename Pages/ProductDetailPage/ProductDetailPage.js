@@ -36,14 +36,14 @@ const ProductDetailPage = props =>{
                 </View>
             </ScrollView>
             <View style={styles.container2}>
-                <TouchableNativeFeedback key='add-to-cart' nativeID="add-to-cart" accessibilityLabel="add-to-cart"
+                <TouchableNativeFeedback testID= "add-to-cart" key='add-to-cart' nativeID="add-to-cart" accessibilityLabel="add-to-cart"
                     onPress={()=>dispatch(addToCart(selectedProduct.productId))}
                 >
                     <View style={styles.addToCart}>
                         <Text style={styles.addToCartText}>ADD TO CART</Text>
                     </View>
                 </TouchableNativeFeedback>
-                <TouchableNativeFeedback nativeID="buy-now" accessibilityLabel="buy-now"
+                <TouchableNativeFeedback testID="buy-now" key="buy-now" nativeID="buy-now" accessibilityLabel="buy-now"
                     onPress={()=>props.navigation.navigate({
                         routeName : 'OrderSummary',
                         params :{
@@ -67,7 +67,7 @@ ProductDetailPage.navigationOptions = navData=>{
         headerRight : ()=>{
             return (
                 <HeaderButtons HeaderButtonComponent={HeaderButton}>
-                    <View nativeID="cart" accessibilityLabel="cart" key='cart2' style={styles.cartIconContainer}>
+                    <View testID= "cart" nativeID="cart" accessibilityLabel="cart" key='cart' style={styles.cartIconContainer}>
                         <Item
                             title='Menu' 
                             iconName='md-cart'

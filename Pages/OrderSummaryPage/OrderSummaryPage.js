@@ -76,7 +76,7 @@ const OrderSummaryPage = props=>{
                         </View>
                         </View>
                     }
-                    <TouchableNativeFeedback nativeID="add-select-address" accessibilityLabel="add-select-address"
+                    <TouchableNativeFeedback key="add-select-address" testID="add-select-address" nativeID="add-select-address" accessibilityLabel="add-select-address"
                         onPress={()=>props.navigation.navigate('SelectAddress')}
                         background={TouchableNativeFeedback.Ripple('#A5CAD2')}
                     >
@@ -89,7 +89,7 @@ const OrderSummaryPage = props=>{
             </ScrollView>
             <View style={styles.priceInfoBar}>
                     <Text style={styles.totalPriceText}>${totalPrice.toFixed(2)}</Text>
-                    <TouchableNativeFeedback  nativeID="place-order"  accessibilityLabel="place-order"
+                    <TouchableNativeFeedback key="place-order" testID="place-order" nativeID="place-order"  accessibilityLabel="place-order"
                         onPress={onContinueHandler}>
                         <View style={styles.placeOrderButton}>
                             <Text style={styles.placeOrderButtonText}>PLACE ORDER</Text>
